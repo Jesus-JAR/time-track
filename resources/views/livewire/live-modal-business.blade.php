@@ -1,5 +1,5 @@
 <div>
-    <form action="" wire:submit.prevent="createBusiness">
+    <form action="" wire:submit.prevent="{{ $method }}">
 {{-- llamamos al modal para crear y editar empresa y añadimos los inputs mediante el componente component-input --}}
         <x-component-modal-business :showModal="$showModal" :action="$action" :title="$title">
 
