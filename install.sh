@@ -34,7 +34,6 @@ php artisan key:generate
 sudo php artisan storage:link
 sudo php artisan config:clear
 sudo php artisan cache:clear
-sudo  php artisan route:cache
 sudo php artisan livewire:publish --assets
 sudo php artisan key:generate
 sudo systemctl reload apache2
