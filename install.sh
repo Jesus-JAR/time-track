@@ -15,10 +15,6 @@ sudo chown -R $USER:www-data bootstrap/cache
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
-# Si tu aplicación en Laravel cuenta con muchas rutas es muy importante que corras el comando
-#route:cache para mejorar el rendimiento de la aplicación:
-# php artisan route:cache
-
 # Ahora vamos a precompilar todas las vistas de Blade:
 # php artisan view:cache
 
@@ -38,6 +34,7 @@ php artisan key:generate
 sudo php artisan storage:link
 sudo php artisan config:clear
 sudo php artisan cache:clear
+sudo  php artisan route:cache
 sudo php artisan livewire:publish --assets
 sudo php artisan key:generate
 sudo systemctl reload apache2
