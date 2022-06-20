@@ -76,6 +76,7 @@ class LiveModalBusiness extends Component
         $requestBusiness = new RequestUpdateBusiness();
         $values = $this->validate($requestBusiness->rules($this->business), $requestBusiness->messages());
         $this->business->update($values);
+        $this->alert('success', 'Business successfully updated!');
         $this->emit('businessListUpdate');
         $this->reset();
     }
